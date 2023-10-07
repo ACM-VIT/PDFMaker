@@ -12,7 +12,9 @@ Welcome to PDFMaker, a fun and easy tool to help you whip up PDFs for your assig
   <img alt="license" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
 </p>
 <p align = "center">
-  <a href="https://twitter.com/ACM_VIT" target="blank"><img src="https://img.shields.io/twitter/follow/ACM_VIT?style=social"></a>
+  <a href="https://twitter.com/ACM_VIT" target="_blank"><img src="https://img.shields.io/twitter/follow/ACM_VIT?style=social"></a>
+  <a href="https://www.instagram.com/acmvit" target="_blank"><img src="https://img.shields.io/badge/Instagram-acmvit-E4405F"></a>
+  <a href="https://facebook.com/ACM.VITU" target="_blank"><img src="https://img.shields.io/badge/Facebook-ACM.VITU-1877F2"></a>
 </p>
 
 ## Getting Started :rocket:
