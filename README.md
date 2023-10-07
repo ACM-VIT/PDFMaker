@@ -1,4 +1,4 @@
-![ACM-HEADER](https://user-images.githubusercontent.com/14032427/92643737-e6252e00-f2ff-11ea-8a51-1f1b69caba9f.png)
+![ACM-BANNER](https://github.com/ACM-VIT/PDFMaker/assets/114558126/7a55f16c-ea42-4662-b4b4-7d40557178ef)
 
 <h1 align="center"> PDFMaker :page_facing_up: </h1>
 <p align="center"><img alt="license" src="https://github.com/ACM-VIT/PDFMaker/assets/114558126/953d8e70-2392-444f-95e6-f24038e7f544" /></p>
