@@ -21,7 +21,7 @@ Welcome to PDFMaker, a fun and easy tool to help you whip up PDFs for your assig
 
 OR
 
-Use a hosted version here at: 
+Use a hosted version here at: https://pdfmaker.streamlit.app/
 
 ## Contribution Guidelines :handshake:
 We love pull requests from everyone. Whether you're new to coding, or a seasoned developer, your contributions are always welcome. Check out [CONTRIBUTING.md](https://github.com/ACM-VIT/PDFMaker/blob/main/CONTRIBUTING.md) and also check out the [Issues](https://github.com/ACM-VIT/PDFMaker/issues) tab for open tickets, or open a new issue if you've found a bug or have a feature request.
