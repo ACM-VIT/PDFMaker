@@ -19,7 +19,28 @@ def generate_pdf(name, reg_num, ass_name, text_in, file):
 
 # Create a sidebar
 with st.sidebar:
-    st.write("")
+    # Lines about PDFMaker
+    st.title('PDFMaker')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    st.markdown('An easy tool to help you make your assignments into a PDF in seconds.')
+    st.markdown('Just four simple steps,')
+
+    # Lines describing how to use PDFMaker
+    sidebar_content = ""
+
+    list_item_spacing = "  \n  \n"
+
+    sidebar_content += "👉 " + "Fill the details" + list_item_spacing
+
+    sidebar_content += "👉 " + "Enter content to print on the first page" + list_item_spacing
+
+    sidebar_content += "👉 " + "Upload the images of your assignment" + list_item_spacing
+
+    sidebar_content += "👉 " + "Click on \"Generate PDF\" button" + list_item_spacing
+
+    sidebar_content +=  "Voila! your assignment PDF is downloaded." + "🥳" + list_item_spacing
+
+    st.markdown(sidebar_content)
+
 
 # Title
 st.title('PDF Maker')
