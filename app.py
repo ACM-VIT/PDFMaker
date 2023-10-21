@@ -1,7 +1,7 @@
 # Standard Library Imports
 import os
 import base64
-
+import tempfile
 # Third-Party Library Imports
 import streamlit as st
 from fpdf import FPDF
@@ -15,7 +15,30 @@ st.set_page_config(page_title='PDFMaker', page_icon=':memo:', layout='wide')
 
 def generate_pdf(name, reg_num, ass_name, text_in, file):
     # PDF generation code goes here
-    pass
+    pdf = FPDF()
+    pdf.add_page()
+
+    # Set font
+    pdf.set_font("Arial", size=12)
+
+    # Header
+    pdf.cell(200, 10, txt=ass_name, ln=True, align="C")
+    pdf.cell(200, 10, txt=f"Name: {name}", ln=True, align="C")
+    pdf.cell(200, 10, txt=f"Registration Number: {reg_num}", ln=True, align="C")
+
+    # Content
+    pdf.multi_cell(0, 10, txt=text_in)
+    _, file_extension = os.path.splitext(file.name)
+    # If a file is uploaded, save it to a temporary file and include it in the PDF
+    if file:
+        with tempfile.NamedTemporaryFile(delete=False, suffix = file_extension) as temp_image:
+            temp_image.write(file.read())
+            temp_image.seek(0)
+            pdf.image(temp_image.name, x=10, w=190)
+
+    pdf_filename = f"{name}_{ass_name}.pdf"
+    pdf.output(pdf_filename)
+    return pdf_filename
 
 # Create a sidebar
 with st.sidebar:
@@ -62,7 +85,18 @@ uploaded_file = st.file_uploader(
 
 if st.button('Generate PDF'):
     if user_name and reg_num and ass_name:
-        generate_pdf(user_name, reg_num, ass_name, user_text_input, uploaded_file)
+        pdf_filename = generate_pdf(user_name, reg_num, ass_name, user_text_input, uploaded_file)
         st.success('PDF generated successfully.')
+
+        # Read the PDF data from the generated file
+        with open(pdf_filename, "rb") as f:
+            pdf_data = f.read()
+
+        # Create a download button to download the generated PDF
+        st.download_button(label="Download",
+                            data=pdf_data,
+                            file_name=f'{user_name}_{ass_name}.pdf',
+                            mime='text',)
+
     else:
         st.error('Please fill in all required fields.')
